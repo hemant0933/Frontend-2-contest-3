@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login page</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
+      crossorigin="anonymous"
+    />
+   <!-- <style>
+    .dog{
+        content: url(https://imgs.search.brave.com/tv5Saqzom4ZLipFzQRF0yBLLYIQ_C3G90bQQMoFblf0/rs:fit:1200:1200:1/g:ce/aHR0cDovL215cGV0/c21hcnQucGV0c21h/cnQtZGV2LmNvbS9z/aXRlcy9kZWZhdWx0/L2ZpbGVzL2ZpZWxk/X2ltYWdlL3B1Zy0z/LmpwZw);
+    }
+    .cat{
+        content: url(https://imgs.search.brave.com/i7_oqGyTYWG_dAChpveG8Nu8o84v2uPp2f-jz0c-6cw/rs:fit:474:225:1/g:ce/aHR0cHM6Ly90c2Uz/Lm1tLmJpbmcubmV0/L3RoP2lkPU9JUC5p/NkgwNjJJUHg5cFNG/ZmhORVlHdkxBSGFI/YSZwaWQ9QXBp);
+    }
+    .goat{
+       content: url(https://imgs.search.brave.com/nygmp7Q8K1i3cOdRQKSizpO4qqS2FFAsO5dAfCuXAkU/rs:fit:600:600:1/g:ce/aHR0cDovLzQuYnAu/YmxvZ3Nwb3QuY29t/Ly1sb2gwQmVnR21R/Zy9UemlWeGZ0M1NF/SS9BQUFBQUFBQUF0/RS90ZEVRNnIyUG43/ay9zMTYwMC82MDBw/eC1IYXVzemllZ2Vf/MDQuanBn);
+    }
+   </style> -->
+</head>
+<body>
+    
+    <!-- <h1>PAGES - 3</h1> -->
+    <div class="container">
+        <textarea name="" id="textBox" cols="60" rows="10"></textarea>
+        <button id="submitbTN">Submit</button>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+      crossorigin="anonymous"
+    ></script>
+    <script >
+
+        var sampledata =[ {question: 'What is a dog' , answer: 'Dog is a animal with 4 legs', imageLink : './dog.jpeg'},
+        {question: 'What is a cat' , answer: 'cat is a animal with 4 legs', imageLink : './cat.jpeg'},
+        {question: 'What is a goat' , answer: 'goat is a animal with 4 legs', imageLink : './goat.jpeg'}
+        ]
+
+        
+        var btnsubmit = document.getElementById('submitbTN');
+
+        btnsubmit.addEventListener('click',showImage);
+
+        function showImage(){
+            var question = document.getElementById('textBox');
+            var body = document.getElementsByTagName('body')
+            var q = question.value;
+
+            for(let i=0;i<sampledata.length;i++){
+                if(sampledata[i].question == q){
+                  var sampleimg = document.createElement('img').src = 'sampledata[i].imageLink'
+                    body.append(sampleimg);
+
+                }
+            }
+
+        }
+
+    </script>
+</body>
+</html>
